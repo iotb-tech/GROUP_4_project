@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MealMenu</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- HEADER -->
+    <header class="bg-white shadow p-4 text-center">
+      <h1 class="text-3xl font-bold text-orange-500">🍽 MealMenu</h1>
+      <p class="text-gray-500 text-sm mt-1">
+        Search and explore meals from around the world
+      </p>
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search meals e.g. chicken, pasta..."
+        class="mt-4 w-full max-w-md border border-gray-300 rounded-full px-5 py-2 outline-none focus:ring-2 focus:ring-orange-400"
+      />
+    </header>
+
+    <!-- RESULTS -->
+    <main class="flex-1 p-6">
+      <div
+        id="results-grid"
+        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+      >
+        <p class="text-gray-400 col-span-full text-center">
+          Type something to search meals...
+        </p>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-center text-xs text-gray-400 p-4">
+      Built by Group 4 · Powered by TheMealDB
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
