@@ -15,10 +15,10 @@ A single-page web app for searching and exploring meals from around the world.
 
 ## Getting Started
 
-git clone <your-repo-url>
-cd GROUP_4_project
-npm install
-npm run dev
+- git clone <your-repo-url>
+- cd GROUP_4_project
+- npm install
+- npm run dev
 
 ## Team
 | Member | Role |
