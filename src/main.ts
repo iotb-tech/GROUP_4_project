@@ -1,4 +1,4 @@
-import { searchMeals, getMealById, getMealsByCategory} from "./api/meals";
+import { searchMeals, getMealById} from "./api/meals";
 import { openModal } from "./components/modal";
 import type { Meal } from "./types/meal";
 
