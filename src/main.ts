@@ -1,4 +1,4 @@
-import { searchMeals, getMealById } from "./api/meals";
+import { searchMeals, getMealById, getMealsByCategory} from "./api/meals";
 import { openModal } from "./components/modal";
 import type { Meal } from "./types/meal";
 
@@ -28,11 +28,15 @@ async function handleSearch(query: string): Promise<void> {
     grid.innerHTML = meals
       .map(
         (meal: Meal) => `
-      <div class="meal-card cursor-pointer rounded-xl overflow-hidden shadow hover:shadow-lg transition" data-id="${meal.idMeal}">
+      <div class="relative meal-card cursor-pointer rounded-xl  shadow hover:shadow-lg transition" data-id="${meal.idMeal}">
+      <button class="absolute right-2 top-2 bg-white/40 rounded-full w-10 h-10 text-3xl text-white ">
+                   ♥ 
+                </button>
         <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="w-full h-48 object-cover"/>
-        <div class="p-3">
+        <div class="p-3 relative">
           <h3 class="font-semibold text-sm">${meal.strMeal}</h3>
-          <p class="text-xs text-gray-500">${meal.strCategory}</p>
+          <p class="text-xs text-gray-500 w-full">${meal.strCategory}</p>
+          
         </div>
       </div>
     `,
@@ -55,5 +59,14 @@ async function handleSearch(query: string): Promise<void> {
 const searchInput = document.getElementById("search-input") as HTMLInputElement;
 searchInput.addEventListener("input", () => {
   clearTimeout(debounceTimer);
-  debounceTimer = setTimeout(() => handleSearch(searchInput.value), 300);
+  debounceTimer = setTimeout(() => handleSearch(searchInput.value), 500);
 });
+
+const categs = document.getElementsByClassName('categ')
+console.log(categs)
+
+const categsArr = Array.from(categs)
+
+categsArr.forEach(cat => cat.addEventListener('click', () => {
+  handleSearch(cat.textContent.toLowerCase())
+}))
