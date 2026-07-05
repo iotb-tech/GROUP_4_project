@@ -15,16 +15,16 @@ A single-page web app for searching and exploring meals from around the world.
 
 ## Getting Started
 
-git clone <your-repo-url>
-cd GROUP_4_project
-npm install
-npm run dev
+- git clone <your-repo-url>
+- cd GROUP_4_project
+- npm install
+- npm run dev
 
 ## Team
 | Member | Role |
 |--------|------|
 | Fatima Zariyatu | Fetch & search logic, Detail view modal |
-| Ismail Yunusa | Results UI, Favourites & styling |
+| Ismail Yunus | Results UI, Favourites & styling |
 
 ## API
 Powered by [TheMealDB](https://www.themealdb.com/api.php) — free public API, no key required.

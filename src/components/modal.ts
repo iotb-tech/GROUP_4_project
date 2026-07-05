@@ -19,10 +19,11 @@ export function openModal(meal: Meal): void {
   const modal = document.createElement("div");
   modal.id = "meal-modal";
   modal.className =
-    "fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4";
+    "fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4 ";
   modal.innerHTML = `
-    <div class="bg-white rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 relative">
-      <button id="close-modal" class="absolute top-3 right-4 text-2xl font-bold text-gray-500 hover:text-black">&times;</button>
+    <div class="bg-white rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 relative scrollbar-none">
+      <button id="close-modal" class="absolute top-0 right-2 text-2xl font-bold text-gray-500 hover:text-black">&times;</button>
+       
       <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="w-full rounded-xl mb-4"/>
       <h2 class="text-2xl font-bold mb-1">${meal.strMeal}</h2>
       <p class="text-sm text-gray-500 mb-4">${meal.strCategory} · ${meal.strArea}</p>
