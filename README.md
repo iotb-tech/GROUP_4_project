@@ -24,7 +24,7 @@ npm run dev
 | Member | Role |
 |--------|------|
 | Fatima Zariyatu | Fetch & search logic, Detail view modal |
-| Ismail Yunusa | Results UI, Favourites & styling |
+| Ismail Yunus | Results UI, Favourites & styling |
 
 ## API
 Powered by [TheMealDB](https://www.themealdb.com/api.php) — free public API, no key required.
